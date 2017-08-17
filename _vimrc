@@ -65,4 +65,3 @@ nnoremap Y y$
 
 let mapleader=" "
 
-echom "my vimrc is used"

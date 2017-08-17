@@ -1,0 +1,15 @@
+filetype off                  " required
+
+
+set backspace=2
+syn on
+nnoremap Q @q
+nnoremap cc ddO
+nnoremap <C-J> a<CR><ESC>k$
+nnoremap Y y$
+
+let mapleader = " "
+nmap <leader>k :vsc Edit.CommentSelection<CR>
+nmap <leader>uk :vsc Edit.UncommentSelection<CR>
+vmap <leader>k :vsc Edit.CommentSelection<CR><ESC><ESC>
+vmap <leader>uk :vsc Edit.UncommentSelection<CR><ESC><ESC>

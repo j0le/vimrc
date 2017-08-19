@@ -40,6 +40,10 @@ if vundle_zeug
     Plugin 'rust-lang/rust.vim'
     Plugin 'wincent/command-t'
 
+    if filereadable('vundlespeciale.vim')
+        source vundlespeciale.vim
+    endif
+
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
     filetype plugin indent on    " required
@@ -78,4 +82,6 @@ inoremap <S-CR> <CR><C-O><BS>
 nnoremap <C-CR> <C-]>
 
 let mapleader=" "
+
+
 

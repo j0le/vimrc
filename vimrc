@@ -93,15 +93,24 @@ nnoremap <X1Mouse> <C-O>
 " yank and delete stuff {{{
     " Y yanks the rest of the line, which is more logic to me
     nnoremap Y y$
-    " YY yanks complete line without linebreak
-    nnoremap YY ^y$
     " DD deletes hole line without linebreak
     nnoremap DD ^d$
     " delete hole line but yank without linebreak
     nnoremap DDD ^d$"_dd
+    
+    " YY yanks complete line without linebreak
+    function! s:YankLine()
+        let view = winsaveview()
+        normal! ^y$
+        call winrestview(view)
+    endf
+    nnoremap YY :<c-u>call <SID>YankLine()<cr>
+
 " yank and delete stuff }}}
 
 let mapleader=" "
 
+" open a link
+nnoremap <leader><CR><CR> <C-]>
 
-
+" vim: fdm=marker:

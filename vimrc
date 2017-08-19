@@ -40,8 +40,8 @@ if vundle_zeug
     Plugin 'rust-lang/rust.vim'
     Plugin 'wincent/command-t'
 
-    if filereadable('vundlespeciale.vim')
-        source vundlespeciale.vim
+    if filereadable('./special/vundlespeciale.vim')
+        source ./special/vundlespeciale.vim
     endif
 
     " All of your Plugins must be added before the following line

@@ -1,5 +1,7 @@
 # vim swapfile
 *.swp
-.gitignore
+
 /bundle/
+/special/
+.netrwhist
 

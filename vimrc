@@ -9,7 +9,7 @@ filetype off                  " required
     let vundle_zeug = 1
     if has('win32')
         set rtp+=~/vimfiles/bundle/Vundle.vim/
-        call vundle#begin('%USERPROFILE%/vimfiles/bundle/')
+        call vundle#begin('~/vimfiles/bundle/')
     elseif has('unix')
         set rtp+=~/.vim/bundle/Vundle.vim
         call vundle#begin()
@@ -71,6 +71,7 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 nnoremap Q @q
 set number relativenumber
 
+"
 " autocmd CmdwinEnter * nnoremap <CR> <CR>
 " autocmd BufReadPost quickfix nnoremap <CR> <CR>
 
@@ -95,8 +96,9 @@ nnoremap <X1Mouse> <C-O>
     nnoremap Y y$
     " DD deletes hole line without linebreak
     nnoremap DD ^d$
-    " delete hole line but yank without linebreak
+    " delete hole line and linebreak but yank without linebreak
     nnoremap DDD ^d$"_dd
+    nnoremap D<leader> D
     
     " YY yanks complete line without linebreak
     function! s:YankLine()
@@ -111,6 +113,24 @@ nnoremap <X1Mouse> <C-O>
 let mapleader=" "
 
 " open a link
-nnoremap <leader><CR><CR> <C-]>
+nnoremap <leader><CR> <C-]>
+
+" jump to end of line
+nnoremap E $
+
+
+" NERDTree mapping
+nnoremap <C-N> :NERDTreeFocus<CR>
+
+" Windows {{{
+nnoremap <leader>h <C-W>h
+nnoremap <leader>j <C-W>j
+nnoremap <leader>k <C-W>k
+nnoremap <leader>l <C-W>l
+nnoremap + :<c-u>resize +5<CR>
+nnoremap - :<c-u>resize -5<CR>
+nnoremap <leader>+ :<c-u>vertical resize +5<CR>
+nnoremap <leader>- :<c-u>vertical resize -5<CR>
+" Windows }}}
 
 " vim: fdm=marker:

@@ -1,0 +1,7 @@
+# vim swapfile
+*.swp
+
+/bundle/
+/special/
+.netrwhist
+

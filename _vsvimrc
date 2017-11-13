@@ -6,7 +6,13 @@ syn on
 nnoremap Q @q
 nnoremap cc ddO
 nnoremap <C-J> a<CR><ESC>k$
+
+" Y yanks the rest of the line, which is more logic to me
 nnoremap Y y$
+" DD deletes hole line without linebreak
+nnoremap DD ^d$
+" delete hole line and linebreak but yank without linebreak
+nnoremap DDD ^d$"_dd
 
 let mapleader = " "
 nmap <leader>k :vsc Edit.CommentSelection<CR>

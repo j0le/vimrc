@@ -6,7 +6,7 @@ filetype off                  " required
 "call vundle#begin('~/some/path/here')
 
 let vundle_zeug = 1
-if has('win32')
+if has('win32') || has('win32unix')
     set rtp+=~/vimfiles/bundle/Vundle.vim/
     call vundle#begin('%USERPROFILE%/vimfiles/bundle/')
 elseif has('unix')
@@ -56,7 +56,7 @@ if vundle_zeug
     " Put your non-Plugin stuff after this line
 endif
 
-
+set nowrap
 set encoding=utf8
 set backspace=2
 syn on

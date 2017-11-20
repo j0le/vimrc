@@ -91,7 +91,8 @@ nnoremap E $
 
 
 " NERDTree mapping
-nnoremap <C-N> :NERDTreeFocus<CR>
+"nnoremap <C-N> :NERDTreeFocus<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
 
 " Windows {{{
 nnoremap <leader>h <C-W>h

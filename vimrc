@@ -41,6 +41,7 @@ filetype off                  " required
         Plugin 'rust-lang/rust.vim'
         Plugin 'wincent/command-t'
         Plugin 'scrooloose/nerdtree'
+        Plugin 'PProvost/vim-ps1'
 
 
         if filereadable('./special/vundlespeciale.vim')
@@ -87,6 +88,14 @@ set number relativenumber
     nnoremap <S-CR> O<ESC>
 " GUI stuff }}}
 
+" when 'wrap' is set, display as much as possible of hole line
+set display=truncate
+
+" move display lines not buffer lines
+noremap <Up> g<Up>
+noremap <Down> g<Down>
+set whichwrap+=s
+noremap <C-L> <space>
 
 " extra mouse key goes backwards
 nnoremap <X1Mouse> <C-O>
@@ -110,6 +119,7 @@ nnoremap <X1Mouse> <C-O>
 
 " yank and delete stuff }}}
 
+map <space> <nop>
 let mapleader=" "
 
 " open a link

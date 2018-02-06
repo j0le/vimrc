@@ -19,3 +19,13 @@ nmap <leader>k :vsc Edit.CommentSelection<CR>
 nmap <leader>uk :vsc Edit.UncommentSelection<CR>
 vmap <leader>k :vsc Edit.CommentSelection<CR><ESC><ESC>
 vmap <leader>uk :vsc Edit.UncommentSelection<CR><ESC><ESC>
+
+nmap <leader>s :vsc SolutionExplorer.SyncWithActiveDocument<CR>
+
+
+
+" Window Navigation
+nnoremap <leader>h <C-W>h
+nnoremap <leader>j <C-W>j
+nnoremap <leader>k <C-W>k
+nnoremap <leader>l <C-W>l

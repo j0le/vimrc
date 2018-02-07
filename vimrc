@@ -23,6 +23,7 @@ filetype off                  " required
         Plugin 'wincent/command-t'
         Plugin 'scrooloose/nerdtree'
         Plugin 'PProvost/vim-ps1'
+        Plugin 'vim-latex/vim-latex'
 
 
         if filereadable('./special/vundlespeciale.vim')
@@ -52,6 +53,7 @@ set number relativenumber
     nnoremap <C-J> a<CR><ESC>k$
     nnoremap <C-CR> <C-]>
 " CR stuff }}}
+"
 
 " GUI stuff {{{
     set guifont=Consolas:h10:cANSI:qDRAFT
@@ -114,5 +116,10 @@ nnoremap - :<c-u>resize -5<CR>
 nnoremap <leader>+ :<c-u>vertical resize +5<CR>
 nnoremap <leader>- :<c-u>vertical resize -5<CR>
 " Windows }}}
+
+"Latex {{{
+let g:Tex_CompileRule_pdf = 'pdflatex.exe -synctex=1 -interaction=nonstopmode $* --shell-escape'
+":TTarget pdf
+"Latex }}}
 
 " vim: fdm=marker:

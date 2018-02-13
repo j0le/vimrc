@@ -49,7 +49,7 @@ set number relativenumber
 
 " CR stuff {{{
     nnoremap <CR> o<ESC>
-    nnoremap <C-J> a<CR><ESC>k$
+    "nnoremap <C-J> a<CR><ESC>k$
     nnoremap <C-CR> <C-]>
 " CR stuff }}}
 
@@ -65,6 +65,9 @@ set display=truncate
 " move display lines not buffer lines
 noremap <Up> g<Up>
 noremap <Down> g<Down>
+noremap <C-K> g<Up>
+noremap <C-J> g<Down>
+
 set whichwrap+=s
 noremap <C-L> <space>
 
